@@ -1,0 +1,35 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+body {
+	min-height: 100vh;
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	display: grid;
+	place-items: center;
+}
+form {
+	padding: 25px;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+}
+form input {
+	height: 30px;
+	padding: 0 10px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+	border-radius: 5px;
+}
+form button {
+	background: #000;
+	height: 37px;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
