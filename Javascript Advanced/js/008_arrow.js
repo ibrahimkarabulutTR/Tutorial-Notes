@@ -56,7 +56,7 @@ window.grade = 80
 
 const calculator = {
 	// examResult: function () {
-	examResult: () => {
+	examResult: function() {
 		return this.name + " " + this.grade
 	}
 }

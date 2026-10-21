@@ -14,8 +14,14 @@ for(let n=0; n<names.length; n++) {
 
 
 /* Second Method */
+// give array content
 for(let name of names) {
 	console.log(name);
+}
+
+// give array number
+for(let name in names) {
+  console.log(name)
 }
 
 

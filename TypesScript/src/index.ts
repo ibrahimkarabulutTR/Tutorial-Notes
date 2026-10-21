@@ -307,6 +307,22 @@ let userSettings: Settings = {
   external: true
 }
 
+interface EskiAyarlar {
+    tema: string;
+    font: string;
+}
+
+/*
+// 'tema' özelliğini dışarıda bırak ve yeni bir tip oluştur
+type YeniAyarlar = Omit<EskiAyarlar, 'tema'> & {
+    tema: boolean; // Artık tema boolean olabilir!
+};
+
+const ayar: YeniAyarlar = {
+    tema: true,
+    font: "Arial"
+};*/
+
 // this example is for educational purposes, but it is not going to work.
 const imgElement: HTMLImageElement = document.createElement("img");
 imgElement.src = "image.jpg";
@@ -348,11 +364,13 @@ interface AnimalExInterface {
   type: string;
 }
 
-interface Dog extends AnimalExInterface {
+interface Dog extends AnimalExInterface, PersonExInterface {
   bark(): void;
 }
 
-class Labrador implements Dog {
+class Labrador implements Dog, PersonExInterface {
+  name= 'hamster';
+  age= 1;
   type: string = "dog";
   bark() {
     console.log("woof");
@@ -388,6 +406,20 @@ const aCar: Car = {
   brand: "Toyota",
   model: "Corolla"
 }
+
+// İkisi de aynı işi yapar
+type UserType = { id: number };
+interface UserInterface { id: number };
+
+// İkisi de ": " ile kullanılır (Annotation)
+const user1: UserType = { id: 1 };
+const user2: UserInterface = { id: 2 };
+
+/*
+  Interface: "Açık" bir şablondur. Projenin başka bir yerinde üzerine ekleme yapılabilir. Nesne yönelimli programlamaya (OOP) daha uygundur.
+
+  Type: "Kapalı" bir tanımdır. Bir kere tanımlarsın ve o haliyle kullanırsın. Karmaşık veri yapıları (birleşimler, kesişimler) için çok daha güçlüdür.
+*/
 
 // CLASS
 class Product {

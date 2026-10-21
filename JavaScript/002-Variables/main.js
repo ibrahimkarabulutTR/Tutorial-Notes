@@ -30,6 +30,46 @@ const birthDay = '01.01.2001'
 
 
 
+if(5 > 4) {
+  var result = true
+  // let result = true give an error on calling out of "if"
+  console.log(result)
+}
+console.log(result)
+
+for(let i=0; i<10; i++) {
+  var x=0;
+  // let x=0; give an error on calling out of "for"
+  x=i;
+  console.log(x)
+}
+console.log(x)
+
+
+
+let techl = "js"
+console.log(tech)
+
+// let tech = "javascript" giving error 
+console.log(techl)
+
+
+
+var tech = "js"
+console.log(tech)
+
+var tech = "javascript"
+console.log(tech)
+
+
+
+var vHoisted; // hoisted
+let vUnhoisted; // unhoisted
+console.log(vHoisted)
+// console.log(vUnhoisted) // give an error because its not hoisted variable
+
+
+
 // Multiple variable creation
 let kindergarten = false,
 		primaryEducation = true,
